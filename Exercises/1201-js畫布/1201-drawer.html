@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Simple Drawing Program</title>
+      <style type = "text/css">
+     #canvas { width: 400px;
+	     border: 1px solid #999999;
+                  border-collapse: collapse }
+     td      { width: 4px; height: 4px; margin: 0px; padding: 0px; }
+      </style>
+      <script src = "draw.js"></script>
+   </head>
+   
+   <body>
+   
+   <form action = '#'>
+   <label>color:
+	<input type = "color" name="col"/>
+	</label>
+	</form>
+	
+      <table id = "canvas">
+         <caption>Hold <em>Shift</em> to draw.
+		 Hold <em>Ctrl</em> (or <em>Control</em>) to erase.</caption>
+         <tbody id = "tablebody"></tbody>
+      </table>
+   </body>
+</html>
+ 

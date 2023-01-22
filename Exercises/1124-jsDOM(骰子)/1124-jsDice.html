@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Random Dice Images</title> 
+      <style type = "text/css">
+         li { display: inline; margin-right: 10px; }
+         ul { margin: 0; }
+      </style>
+      <script>
+         var die1Image;
+         var die2Image;
+         var die3Image;
+         var die4Image; 
+         function start()
+         {
+            var button = document.getElementById( "rollButton" );
+            button.addEventListener( "click", rollDice, false );
+         } // end function start 
+         function rollDice( dieImg )
+         {
+			var x = document.images;
+			for (var i = 0; i < x.length; i++){
+				var dieValue = Math.floor( 1 + Math.random() * 6 );
+				x[i].src = "die" + dieValue + ".png";
+				x[i].alt = "die image with " + dieValue + " spot(s)"
+			}
+         } // end function setImage
+         window.addEventListener( "load", start, false );
+      </script>
+   </head>
+ <body>
+      <form action = "#">
+         <input id = "rollButton" type = "button" 
+            value = "Roll Dice">
+      </form>
+      <ol>
+         <li><img src = "blank.png" alt = "blank image"></li>
+         <li><img src = "blank.png" alt = "blank image"></li>
+         <li><img src = "blank.png" alt = "blank image"></li>
+         <li><img src = "blank.png" alt = "blank image"></li>
+      </ol>
+   </body>
+</html>

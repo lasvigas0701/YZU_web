@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Fibonacci Numbers</title>
+      <style type = "text/css">
+         p       { margin: 0px; }
+      </style>
+      <script>
+         var output = ""; // stores the output  
+         function calculateFactorials()
+         {
+            for ( var i = 0; i <= 10; ++i ) 
+               output += "<p>F[" + i + "] = " + Fibonacci( i ) + "</p>";
+            document.getElementById( "results" ).innerHTML = output;
+         } // end function calculate Factorials Numbers
+         function Fibonacci( number )                  
+         {                                             
+            if ( number <= 1 )  // base case           
+               return 1;                               
+            else                                       
+               return Fibonacci(number - 1) + Fibonacci( number - 2 );
+         } // end function Fibonacci                                             
+         window.addEventListener( "load", calculateFactorials, false );
+      </script>
+   </head>
+   <body>
+      <h1>Fibonacci namuber of 0 to 10</h1>
+      <div id = "results"></div>
+   </body>
+</html>

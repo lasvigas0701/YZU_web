@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Dynamic Styles</title>
+      <script>
+        function start()
+        {
+           var button = document.getElementById("set");                   
+           button.addEventListener ("click", setting, false);     
+        }
+		function setting()
+		{
+			var x = document.forms;
+			var col = x[0].col.value;
+			document.body.setAttribute("style",
+				"background-color: " + col );
+		}
+       window.addEventListener( "load", start, false );  
+      </script>
+   </head>
+   <body>
+    <form>
+	  <label>color: 
+		<input type = "color" name="col"/>
+	  </label>
+	 <p>
+	 <input id = "set" type = "button" value = "Set Color">
+	 </p>
+	</form>
+   </body>
+</html>

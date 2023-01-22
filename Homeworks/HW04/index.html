@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>
+    window.onload = function () {
+      $.ajax({
+        url: "php/ipInfo.php",
+        data: {
+        },
+        type: "GET",
+        datatype: "html",
+        success: function (output1) {
+          $.ajax({
+            url: "php/QueryLog.php",
+            data: {
+              IP: output1,
+            },
+            type: "POST",
+            datatype: "html",
+            success: function (times) {
+                console.log(times);
+              if (times < 111) {
+                getFivePict();
+              } else {
+                $("#result").html("<h1>哈哈被banㄌ</h1>");
+              }
+              IP();
+            },
+            error: function () {
+              console.log(" query Request failed.");
+            }
+          });
+        },
+        error: function () {
+          alert("Request failed.");
+        }
+      });
+      };</script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="IPinfo"></div>
+  <div id="fivePicture"></div>
+  <div id="choosenBox"></div>
+  <div id="result"></div>
+  <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>test Page</title>
+    <script>
+        function progress() {
+            var sel = $("#select").val();
+            $.ajax({
+                url: "database.php",
+                data: {
+                    select: sel
+                },
+                type: "POST",
+                datatype: "html",
+                success: function (output) {
+                    $("#out").html(output);
+                },
+                error: function () {
+                    alert("Request failed.");
+                }
+            });
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <form method="post" action="s1113341_hw2.php">
+        <div class="fields">
+            <div class="field">
+                <label for="name" class="bigger">姓名<must>*</must></label>
+                <input type="text" name="name" id="name" value = "huan" required/>
+            </div>
+            <div class="field">
+                <label for="email">Email<must>*</must></label>
+                <input type="email" name="email" id="email" value ="s1103334@mail.yzu.edu.tw" required/>
+            </div>
+            <div class="field">
+                <label for="plan" class="bigger">贊助方案<must>*</must></label>
+                    <input type="radio" id="individual" name="plan" value="1500"  checked required><label for="individual">個人方案</label>
+                    <input type="radio" id="couple" name="plan" value="2800"><label for="couple" >雙人方案</label>
+                    <input type="radio" id="group" name="plan" value="5000"><label for="group" >團體方案</label>
+                    <input type="radio" id="premium" name="plan" value="8500"><label for="premium" >頂級方案</label>
+            </div>
+            <div class="field">
+                <label for="phone" class="bigger">手機號碼<must>*</must></label>
+                    <input type="text" id="phone" name="phone" value="0987-654321" placeholder="09xx-xxxxxx" 
+                        pattern = "09\d{2}-\d{6}" required/>
+            </div>
+            <div class="field">
+                <label for="address" class="bigger">商品寄送地址<must>*</must></label>
+                    <input type="text" id="address" value = 
+                    "address" name="address" required/>
+            </div>
+            <div class="field">
+                <label for="bonus" class="bigger">額外贊助</label>
+                    <input type="text" id="bonus" name="bonus" value="1000" placeholder="請直接填寫100000以內之數字"
+                    pattern = "(\d{1,5}|100000)"/>
+            </div>
+            <div class="field">
+            <input type="submit" value="submit"/>
+            </div>
+    </form>
+</body>
+
+</html>

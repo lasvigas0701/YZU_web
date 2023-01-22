@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head> 
+      <meta charset = "utf-8">
+      <title>Get Comic</title>
+      <script>
+ 
+         var url;
+		 var start;
+		 var end;
+		 var begin;
+		 var finish;
+		 var page;
+		 var img="";
+         url = window.prompt( "Please input url" );
+ 		 start = window.prompt( "Please input starting page" );
+		 end = window.prompt( "Please input ending page" );
+		 begin = parseInt(start);
+		 finish = parseInt(end);
+		 page = begin;
+		 document.writeln("<table width=80%>");
+		 while (page <= finish){
+		  img = url+"00"+page+".jpg";
+		  document.writeln("<tr><td><img src ="+img+"></td></tr>");
+		  page++;
+		 }
+		 document.writeln("</table>");
+      </script>
+   </head><body></body>
+</html>

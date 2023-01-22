@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Die Rolling Frequencies</title> 
+      <style type = "text/css">
+        div {
+			width : 300px;
+			height : 300px;
+			border : 1px solid black;
+			float: left;
+		}
+      </style>
+	  <script>
+         var colors = ["backgroung:rgb(255,255,255)",
+					  "background:rgb(255,255,255)",
+					  "background:rgb(255,255,255)"];
+         function start()
+         {
+            var button = document.getElementById( "ChangeColor" );
+            button.addEventListener( "click", setColor, false );
+         }
+         function setColor()
+         {
+			var d1 = document.getElementById( "d1" );
+			var d2 = document.getElementById( "d2" );
+			var d3 = document.getElementById( "d3" );
+            var R = Math.floor( 0 + Math.random() * 255 );
+			var G = Math.floor( 0 + Math.random() * 255 );
+			var B = Math.floor( 0 + Math.random() * 255 );
+			var setting = "background:rgb("+R+","+G+","+B+")";
+			colors[2]=colors[1];
+			colors[1]=colors[0];
+			colors[0]=setting;
+            d1.setAttribute( "style", colors[0] );
+			d2.setAttribute( "style", colors[1] );
+			d3.setAttribute( "style", colors[2] );
+         } 
+         window.addEventListener( "load", start, false );                                          
+      </script>
+	<body>
+	   <form action = "#">
+		  <input id = "ChangeColor" type ="button"
+			 value = "Change Color">
+	   </form>
+	  <div id = "d1"></div>
+	  <div id = "d2"></div>
+	  <div id = "d3"></div>
+	</body>

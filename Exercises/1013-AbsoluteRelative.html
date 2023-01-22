@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Relative Positioning</title>
+      <style type = "text/css">
+         p           { font-size: 24px;
+                       font-family: verdana, arial, sans-serif; }
+         .testabsolute      { position: absolute;
+                       top: 35px;
+					   left: 20px; 
+					   color: red;}
+         .shiftleft  { position: relative;
+                       left: -20px; }
+         .shiftright { position: relative;
+                       right: -20px; }
+      </style>
+   </head>
+   <body>
+      <p class = "original">TEST Normal</p>
+      <p class = "testabsolute">TEST absolute left:20px, top:35px</p>
+      <p class = "shiftleft">test Left 20px</p>
+      <p class = "shiftright">TEST Right 20px</p>
+   </body>
+</html>

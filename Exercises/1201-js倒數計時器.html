@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Simple Drawing Program</title>
+      <style type = "text/css">
+	div { float :left;
+	      margin: 10px;
+	}
+	p#out
+	{
+	    font-size : 50pt;
+	    text-align: center;
+	}
+	<!-- div#d1,div#d3 -->
+	<!-- { -->
+	     <!-- border: 1px solid #999999; -->
+	<!-- } -->
+	<!-- img { -->
+	       <!-- width:400px; -->
+	       <!-- height:400px; -->
+	<!-- } -->
+        div#ck
+        {
+            border: 3px solid navy;
+            padding: 5px 20px;
+            background: lightcyan;
+            width: 100px;
+            text-align: center;
+            border-radius: 15px;
+			margin-top : 20px;
+        }
+        div#ck:hover
+        {
+			box-shadow: 0px 5px 10px dimgrey;
+        }
+		div#ck:active
+		{  
+			margin-top : 25px;
+			box-shadow: 0px 0px 0px dimgrey; 
+        }       
+      </style>
+	  <script type = "text/javascript">
+		var interval = null;
+		var second = 60;
+		function run ()
+		{
+			second--;
+			if (second < 0)
+			{
+				document.getElementById("out").innerHTML = "TIME'S UP!!";
+				window.clearInterval(interval);
+				interval = null;
+			}
+			else
+			{
+				document.getElementById("out").innerHTML = second;
+			}
+		}
+		
+		function start()
+		{
+			document.getElementById("ck").addEventListener("click", countdown, false);
+		}
+		
+		function countdown ()
+		{
+			if (interval)
+				return;
+			second = 60;
+			interval = window.setInterval("run()", 1000);
+		}
+	  window.addEventListener("load", start, false);
+	  </script>
+   </head>
+   
+   <body>
+   <form action = "#">
+   <div> 
+       <div id="ck">START</div>
+       <p id ="out"></p>
+   </div>
+   </form>
+   </body>
+</html>

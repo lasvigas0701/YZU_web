@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+ 
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>New HTML5 Input Types</title>
+   </head>
+   <body>
+      <form method = "post" action = "http://www.deitel.com">
+        <p>
+            <label>Student ID:
+               <input type = "text" placeholder = "s########" 
+                  pattern = "s\d{7}"  />
+            </label>(s########)
+         </p>
+        <p>
+            <label>Tel:
+               <input type = "text" placeholder = "09##-######" 
+                  pattern = "09\d{2}-\d{6}" />
+            </label>((##)###-####|(##)####-###)
+         </p>		
+        <p>
+            <label>YZU Email:
+               <input type = "text" placeholder = "s########" 
+                  pattern = "(s\d{7}@mail|[A-Za-z0-9]{2,12}@saturn).yzu.edu.tw" />
+            </label>(s########@mail.yzu.edu.tw)
+         </p>
+        <p>
+            <label>PPT ID:
+               <input type = "text" placeholder = "" 
+                  pattern = "[a-zA-Z][\dA-Za-z]{1,11}" />
+            </label>
+         </p>
+        <p>
+            <label>身分證字號:
+               <input type = "text" placeholder = "" 
+                  pattern = "[A-Z][12]\d{8}"/>
+            </label>
+         </p>
+         <p>
+            <input type = "submit" value = "Submit" />
+            <input type = "reset" value = "Clear" />
+         </p>
+      </form>
+   </body>
+</html>

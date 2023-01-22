@@ -7,4 +7,4 @@ Homeworks/HW02/web-hw2/pdf/*.pdf
 Homeworks/HW02/web-hw2/qrcode/*.png
 Homeworks/HW02/web-hw2/PHPMailer/
 Homeworks/HW02/web-hw2/phpqrcode/
-.gitignore
+*.gitignore

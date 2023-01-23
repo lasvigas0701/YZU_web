@@ -1,7 +1,12 @@
 otherPeople/
-Sources
+Sources/
 *.zip
 hw3_public/
 Project/*.docx
-Homeworks/HW02/web-hw2/pdf/*.pdf
-Homeworks/HW02/web-hw2/qrcode/*.png
+Homeworks/HW02/web-hw2/pdf/
+Homeworks/HW02/web-hw2/qrcode/
+Homeworks/HW02/web-hw2/bonus.php
+Homeworks/HW02/web-hw2/mailler.php
+Homeworks/HW02/web-hw2/temp.php
+Homeworks/HW02/web-hw2/test.html
+

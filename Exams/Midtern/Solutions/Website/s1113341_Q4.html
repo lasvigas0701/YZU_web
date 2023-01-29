@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Q4</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="styles.css" type="text/css" media="all">
+<style type = "text/css">
+.sponsor1{
+	width:400px;
+	height:300px;
+	border: 5px solid red;	
+}
+.sponsor2{
+	width:400px;
+	height:300px;
+	border: 5px solid yellow;	
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="spinner"></div>
+
+<div class="extra">
+<!-- do not delete or change--><div class="mycopy">Website Design: <a href="http://www.myfreecsstemplates.com" class="link33">MyFreeCSSTemplates</a></div><!-- end -->
+<div class="main1"></div>
+
+
+
+<div class="main2">
+  
+<div class="bg1"></div>
+
+<div class="grad1"></div>
+
+
+
+<header>
+  <a href="index.html" class="logo">    
+    <div class="txt1">XX公司</div>
+    <div class="txt2">XX公司</div>
+    <div class="txt3">XX公司</div>
+  </a>
+</header>
+
+
+<nav class="menu">
+  <ul id="menu">
+
+    <li class="nav1">
+      <a href="#!/page_SERVICES">
+        <span class="over1"><span class="txt1">公司介紹 / Introduction</span></span>
+        <span class="over2"><img src="images/splash02.png" alt="" class="img"></span>
+      </a>
+    </li>
+    <li class="nav2 with_ul">
+        <a href="#!/page_PROJECTS">
+            <span class="over1"><span class="txt1">近期活動 / Schedule</span></span>
+            <span class="over2"><img src="images/splash03.png" alt="" class="img"></span>
+        </a>
+    </li>
+    <li class="nav3">
+      <a href="#!/page_CONTACTS">
+        <span class="over1"><span class="txt1">公司地點 / Map Info</span></span>
+        <span class="over2"><img src="images/splash05.png" alt="" class="img"></span>
+      </a>
+
+    </li>
+    <li class="nav4">
+      <a href="#!/page_PARTNERS">
+        <span class="over1"><span class="txt1">募資 / Fundraising </span></span>
+        <span class="over2"><img src="images/splash04.png" alt="" class="img"></span>
+      </a>
+    </li>    
+	<li class="nav5">
+      <a href="#!/page_ABOUT">
+        <span class="over1"><span class="txt1">贊助商 / Sponsor</span></span>
+        <span class="over2"><img src="images/splash01.png" alt="" class="img"></span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+
+
+<article id="content">
+
+  <ul>
+          
+    <li id="page_SPLASH"></li>
+    
+    <li id="page_ABOUT">
+      <div class="vl1"></div>
+      <div class="vl2"></div>
+    <div class="box1">
+      <h2>贊助商(政府)</h2>
+	  <div class="sponsor1">
+	  <img src="yzulogo1.png" alt="logo">
+	  <img src="yzulogo1.png" alt="logo">
+	  </div>
+	  
+    </div>
+	   <div class="box2">
+      <h2>贊助商(企業)</h2>
+	  <div class="sponsor2">
+		<img src="yzulogo2.png" alt="logo">
+		<img src="yzulogo2.png" alt="logo">
+	  </div>	  
+    </div>
+    </li>
+
+    <li id="page_SERVICES">
+      <div class="vl1"></div>
+      <div class="vl2"></div>
+    <div class="box1">
+      
+      <h2>公司介紹</h2>
+	  <p>公司介紹區塊</p>
+	</div>
+    </li>
+
+  
+
+    <li id="page_PROJECTS">
+      <div class="vl1"></div>
+      <div class="vl2"></div>
+
+    <div class="box1">
+      
+      <h2>近期活動</h2>
+		<table class="schedule1">
+		</table>
+	</div>
+
+    </li>
+
+    <li id="page_PARTNERS">
+    
+    <div class="box5">
+    
+    <h2>募資</h2>
+    
+    <div id="note"></div>
+    <div class="scroll-pane"><div>
+    <div id="fields">
+    <form id="ajax-contact-form"  action="javascript:alert('success!');" onsubmit="pro(this)" style = "height:400px;"  >
+    <div class="clear"></div>
+		<!-- ============ Q4 Your code Start ============= -->
+
+            <p>姓名</p>
+            <INPUT type="text" name="Name"  placeholder = "XXX"	required>
+            <div class="clear"></div>
+	       
+			<p>銀行代碼</p>
+            <INPUT type="text" id = "idc" name="ID" placeholder = "###" pattern="\d{3}" required>
+            <div class="clear"></div>
+			
+			<p>銀行帳號</p>
+            <INPUT type="text" id="acc" name="acc" placeholder = "#######-#######" pattern="\d{7}-\d{7}" required>
+            <div class="clear"></div>		
+			
+			<p>統編</p>
+            <INPUT type="text" id="uni" name="uni" placeholder = "########" pattern="\d{8}" >
+            <div class="clear"></div>		
+			
+			<p>Email</p>
+            <input type ="email" name="email" required>
+			<div class="clear"></div>
+			
+            <p>手機</p>    
+            <INPUT type="text" name="cellphone" placeholder ="09########" pattern="09\d{2}-\d{3}-\d{3}" required>
+            <div class="clear"></div>
+			
+            <p>市話</p>        
+            <input type="text" name="phone"  pattern="\(\d{2}\)\d{4}-\d{4}" required>
+            <div class="clear"></div>
+			
+			
+			    <!-- ============ Q4 Your code End ============= -->
+
+            <div class="left" >
+            <INPUT class="submit" type="submit" name="submit" value="submit" style ="margin-top:0px;">
+            </div>
+            <div class="clear"></div>
+            </form>
+            </div></div></div>
+</div>
+</li>
+    <!-- ============ Q6 結束============= -->
+
+    <li id="page_CONTACTS">
+    <div class="box4_1">
+        
+      <h2>公司地點</h2>
+      <div class="scroll-pane">
+          
+      <img src="images/contacts01.jpg" alt="" class="border1 img3">
+
+      <p class="text color1 upper">
+        Contact Address      </p>
+      <p class="text">
+        桃園市中壢區遠東路135號<br />
+        Far East Road, No. 135 Zhongli District Taoyuan City, Taiwan.<br />
+        <br />
+        TELEPHONE:(03) 463 8800<br />
+    </div></div>
+    <div class="box4_2">
+      
+      <h2>Google Map</h2>
+
+      <figure class="google_map"></figure>
+    </div>
+    </li>
+    <li id="page_PRIVACY">
+    <div class="box4">
+
+      <h2>Privacy Policy</h2>
+
+      <div class="scroll-pane"><div>
+        
+        
+
+
+      </div></div>
+    </div>
+    </li>
+
+    <li id="page_MORE">
+    <div class="box4">
+
+      <h2>More</h2>
+
+      <div class="scroll-pane"><div>
+
+
+      </div></div>
+    </div>
+    </li>
+
+
+  </ul>
+</article>
+
+</div>
+
+<footer>
+
+<div class="copyright">Copyright (c) 2022. All rights reserved.</div>
+
+<div class="tola">
+   </div>
+<a href="#!/page_PRIVACY" class="privacy">Privacy policy</a>
+
+</footer>
+</div>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>

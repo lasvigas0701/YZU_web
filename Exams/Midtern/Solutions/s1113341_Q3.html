@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<title>Q3</title>
+<style type = "text/css">
+#box1 {
+    position:absolute;
+	top: 50px;
+	left:50px;
+    width:500px;
+    height:400px;
+	padding: 20px;
+    border:1px solid black;
+}
+#box2 {
+    width:50px;
+    height:200px;
+	background:brown;
+	float: left;
+}
+#box3 {
+	position:relative;
+	-webkit-transition: all 4s linear;
+	-moz-transition: all 4s linear;
+	-o-transition: all 4s linear;
+	transition: all 4s linear;
+	width:300px;
+    height:200px;	
+	background : -webkit-linear-gradient(red,pink);
+	float:left;
+	z-index: 2
+}
+#box4 {
+	position:relative;
+    width:50px;
+    height:200px;
+	background:brown;
+	float: left;
+	z-index: 2;
+}
+#box5 {
+      width : 20px;
+      height : 20px;
+	  margin-top:180px;
+      background : blue;	
+	  border-radius :10px;
+	  transition: all 19s ease-in;
+}
+#box6 {
+	  position:relative;
+      width : 20px;
+      height : 20px;
+	  float: left;
+	  margin-left:380px;
+	  margin-top:-20px;
+      background : green;
+	  border-radius :10px;
+	  z-index: 1;
+	  transition: all 19s ease-in;
+}
+#box1:hover #box3{
+	  height: 20px;
+}
+#box1:hover #box5{
+	  margin-left: 330px; 
+}
+#box1:hover #box6{
+	  margin-left: 50px; 
+}
+</style>
+</head>
+<body>
+	<div id="box1">
+		<div id="box2"></div>
+		<div id="box3"></div>
+		<div id="box4"></div>
+		<div id="box5"></div>
+		<div id="box6"></div>
+	</div>
+</div>
+</body>
+</html>

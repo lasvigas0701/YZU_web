@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Q5</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZeRXUn80EFE_PzJiH8ZPSxnRGtJ0Td6M"></script>
+	<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>	
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 80%;
+        }
+        p {
+            margin: 0;
+            padding: 16px;
+            height: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        請輸入名稱 <input id="d" type="text">
+        <br>
+        <button onclick="add()">搜尋</button>
+    </p>
+    <div id="map"></div>
+
+    <script>
+        window.map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 24.9699054, lng: 121.264305 },
+            zoom: 14
+        });
+        let markers = [];
+        async function run() {
+            markers.forEach(marker => marker.setMap(null));
+            markers = [];
+            let res = await fetch('s1101519_Q5.php').then(res => res.json());
+            for (let item of res) {
+                let myCenter = new google.maps.LatLng(item.lat, item.lng);
+                let png = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
+                let marker = new google.maps.Marker({
+                    position: myCenter,
+                    map,
+                    icon: png,
+                });
+                markers.push(marker);
+                let infowindow = new google.maps.InfoWindow({
+                    content: item.date + " " + item.place,
+                });
+                google.maps.event.addListener(marker, 'click', function () {
+                    infowindow.open(map, marker);
+                });
+            }
+        }
+
+        run();
+
+        async function add() {
+            let $ = document.querySelector.bind(document);
+            let [d, p, lat, lng] = [$('#d').value, $('#p').value, $('#lat').value, $('#lng').value];
+            let fd = new FormData();
+            fd.append('date', d);
+            fd.append('place', p);
+            fd.append('lat', lat);
+            fd.append('lng', lng);
+            let b = new URLSearchParams(fd).toString();
+            await fetch('s1101519_Q5_db.php', {
+                method: 'post',
+                body: b,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                }
+            });
+            run();
+        }
+    </script>
+</body>
+
+</html>

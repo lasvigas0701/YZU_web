@@ -1,0 +1,31 @@
+(a) 2021美聯 賽揚獎投手 Robbie Ray在 2021年 各球種數量為何 ? (5%)
+(Hint: pitcher_name: 投手姓名、 pitch_type: 球種類型 )
+
+SELECT pitch_type ,count(*) FROM `mlb_pbp_2021`  WHERE pitcher_name LIKE 'Robbie Ray' Group by pitch_type
+
+(b) 2021美聯 賽揚獎投手 Robbie Ray在 2021年 分 別在 各 月 投出多少 快速球
+(pitch_type=FF)?(5%)
+
+SELECT substring(`day`,1,7),count(*) FROM `mlb_pbp_2021` WHERE pitcher_name LIKE 'Robbie Ray' and pitch_type LIKE 'FF'
+Group by substring(`day`,1,7)
+
+(c) 2021美聯 賽揚獎投手 Robbie Ray在 2021年 各球種 的平均轉速和球速 為
+何 ? (5%)
+(Hint: end_speed: 球末速 、 spin_rate: 球 轉速 )
+
+SELECT `pitch_type`,avg(`end_speed`),avg(`spin_rate`) FROM `mlb_pbp_2021` 
+WHERE pitcher_name LIKE 'Robbie Ray' Group by `pitch_type`
+
+(d) 2022 MLB 最佳球員 Aaron Judge在 2021年 打出多少安打 ? (5%)
+(Hint: batter_name: 打者 姓名、 result: 打擊結果 )
+(Hint: result 值 為 Single, Double, Triple, Homerun代表 安打 )
+
+SELECT batter_name,count(`result`) FROM `mlb_pbp_2021` WHERE batter_name LIKE 'Aaron Judge' and result LIKE 'Double'
+or batter_name LIKE 'Aaron Judge' and result LIKE 'Single'
+or batter_name LIKE 'Aaron Judge' and result LIKE 'Triple'
+or batter_name LIKE 'Aaron Judge' and result LIKE 'Home Run';
+
+(e) Robbie Ray與 Aaron Judge在 2021年 各種 對決結果 數量為 何 ? (5%)
+
+SELECT batter_name,pitcher_name,result, count(`result`) FROM `mlb_pbp_2021` WHERE batter_name LIKE 'Aaron Judge' 
+and Pitcher_name LIKE 'Robbie Ray' Group By result;

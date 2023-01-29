@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <title>Q1</title>
+	  <style type = "text/css">   
+	  </style>
+	  <script>
+		var number;
+		var sR;
+		var sG;
+		var sB;
+		var eR;
+		var eG;
+		var eB;
+		number = window.prompt("please input width(3-10):");
+		sR = window.prompt("starting R of RGB(0-255):");
+		sG = window.prompt("starting G of RGB(0-255):");
+		sB = window.prompt("starting B of RGB(0-255):");
+		eR = window.prompt("ending R of RGB(0-255):");
+		eG = window.prompt("ending G of RGB(0-255):");
+		eB = window.prompt("ending B of RGB(0-255):");
+		var w = number * 50;
+		var eachR, eachG, eachB;
+		eachR = (sR - eR) / number;
+		eachG = (sG - eG) / number;
+		eachB = (sB - eB) / number;
+		document.writeln( "<table border=1; width : "+w+"px; height : "+w+"px;>");
+        for ( var i = 1; i <= number; i++ ){  
+			document.writeln( "<tr>");
+			for ( var j = 1; j <= number; j++ ){
+				document.writeln( "<td style='background-color:rgb(sR, sG, sB);'>"+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+"</td>");
+			}	
+			sR -= eachR;
+			sG -= eachG;
+			sB -= eachB;
+			document.writeln( "</tr>");
+        }
+        document.writeln( "</table>" );
+      </script>  
+  </head>
+  <body>
+  </body>
+</html>

@@ -17,7 +17,7 @@ Web developing class in first semester of freshmen year (2022F/1111)
 - This course teaches us the necessary Web programming skills, including HTML, CSS, Javascripts, PHP, MYSQL, Ajax, and data visualization for designing Web pages.
 
 ### Guidelines:
--Exams: Midtern and final exam questions and **MY** solutions are in this folder. 
+- Exams: Midtern and final exam questions and **MY** solutions are in this folder. 
 
 - Exercises: This folder includes all exercise that we did in class. Subfolder named "needApache" means that files in this folder need be opened via server.
 

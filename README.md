@@ -1,7 +1,7 @@
 # YZU_web
 
 ```
-Web developing class in first semester of freshmen year (2022F/1111)
+Web developing class in fall semester of freshmen year (2022F/1111)
 ```
 
 ### Course Name: 

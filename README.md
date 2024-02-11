@@ -7,7 +7,7 @@ Web developing class in fall semester of freshmen year (2022F/1111)
 ### Course Name: 
 - Ｗｅｂ程式設計 / Web Programming
 
-### Teacher: 
+### Professor: 
 - 簡廷因 / Ting-Ying Chien
 
 ### Time: 
